@@ -2,17 +2,20 @@ import { Check } from "lucide-react";
 
 export default function AffiliatePanel() {
   return (
-    <section className="py-16 bg-zinc-900 text-white">
+    <section className="py-16 bg-[#0a2a2f] text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              LET&apos;S START SENDING YOUR MONEY
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              GET ACCESS TO OUR AFFILIATE PANEL
             </h2>
             <p className="text-gray-400 mb-8">
-              Integrating advanced technologies, FinEdu reshapes the financial
-              landscape, making it more user-friendly and adaptive to modern
-              needs.
+              Integrating advanced technologies, SportsTradeX reshapes the
+              online passive money making landscape, our earning panel is more
+              user-friendly and adaptive to modern needs.
             </p>
 
             <div className="space-y-8">
@@ -21,7 +24,10 @@ export default function AffiliatePanel() {
                   <Check className="h-5 w-5 text-lime-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-2">
+                  <h3
+                    className="text-xl font-medium mb-2"
+                    style={{ fontFamily: "var(--font-poppins)" }}
+                  >
                     Access 24/7 Customer Support
                   </h3>
                   <p className="text-gray-400">
@@ -36,7 +42,10 @@ export default function AffiliatePanel() {
                   <Check className="h-5 w-5 text-lime-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-2">
+                  <h3
+                    className="text-xl font-medium mb-2"
+                    style={{ fontFamily: "var(--font-poppins)" }}
+                  >
                     Track Transactions in Real-Time
                   </h3>
                   <p className="text-gray-400">
@@ -48,6 +57,7 @@ export default function AffiliatePanel() {
             </div>
           </div>
 
+          {/* Right side - Affiliate Panel Card */}
           <div className="md:w-1/2 flex justify-center items-center">
             <div className="relative">
               <div className="bg-lime-400 p-6 rounded-xl shadow-xl max-w-md">

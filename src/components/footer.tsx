@@ -52,7 +52,12 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <h3
+              className="text-lg font-bold mb-4"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -98,7 +103,12 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Legal</h3>
+            <h3
+              className="text-lg font-bold mb-4"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              Legal
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -136,7 +146,12 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+            <h3
+              className="text-lg font-bold mb-4"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              Contact Us
+            </h3>
             <ul className="space-y-2">
               <li className="text-gray-400">Email: support@sportstradex.in</li>
               <li className="text-gray-400">Phone: +91 98765 43210</li>

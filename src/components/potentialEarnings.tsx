@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 export default function PotentialEarnings() {
   return (
-    <section className="py-14 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4 text-center">
         <h2
           className="text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto"

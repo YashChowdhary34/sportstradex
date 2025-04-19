@@ -3,7 +3,7 @@
 import { GraduationCap, Wallet, Handshake } from "lucide-react";
 import { useEffect, useRef } from "react";
 
-export default function FeatureSection() {
+export default function Services() {
   const sectionRef = useRef(null);
 
   useEffect(() => {

@@ -62,31 +62,37 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
             <Link
-              href="#courses"
+              href="/courses"
               className="text-white hover:text-[#c8f65d] transition-colors text-sm lg:text-base"
             >
               Courses
             </Link>
             <Link
-              href="#experts"
+              href="/experts"
               className="text-white hover:text-[#c8f65d] transition-colors text-sm lg:text-base"
             >
               Our Experts
             </Link>
             <Link
-              href="#pocketmoney"
+              href="/pocketmoney"
               className="text-white hover:text-[#c8f65d] transition-colors text-sm lg:text-base"
             >
               Pocket Money
             </Link>
             <Link
-              href="#affiliate"
+              href="/affiliate"
               className="text-white hover:text-[#c8f65d] transition-colors text-sm lg:text-base"
             >
               Affiliate
             </Link>
             <Link
-              href="#contact"
+              href="/reviews"
+              className="text-white hover:text-[#c8f65d] transition-colors text-sm lg:text-base"
+            >
+              Reviews
+            </Link>
+            <Link
+              href="/contact"
               className="text-white hover:text-[#c8f65d] transition-colors text-sm lg:text-base"
             >
               Contact
@@ -128,35 +134,42 @@ export default function Navbar() {
         >
           <nav className="flex flex-col space-y-3 pb-3 bg-[#0a2a2f] shadow-lg rounded-lg p-4 border border-white/10">
             <Link
-              href="#courses"
+              href="/courses"
               className="text-white/90 hover:text-[#c8f65d] transition-colors text-center py-2 rounded-md hover:bg-white/5"
               onClick={() => setIsMenuOpen(false)}
             >
               Courses
             </Link>
             <Link
-              href="#experts"
+              href="/experts"
               className="text-white/90 hover:text-[#c8f65d] transition-colors text-center py-2 rounded-md hover:bg-white/5"
               onClick={() => setIsMenuOpen(false)}
             >
               Our Experts
             </Link>
             <Link
-              href="#pocketmoney"
+              href="/pocketmoney"
               className="text-white/90 hover:text-[#c8f65d] transition-colors text-center py-2 rounded-md hover:bg-white/5"
               onClick={() => setIsMenuOpen(false)}
             >
               Pocket Money
             </Link>
             <Link
-              href="#affiliate"
+              href="/affiliate"
               className="text-white/90 hover:text-[#c8f65d] transition-colors text-center py-2 rounded-md hover:bg-white/5"
               onClick={() => setIsMenuOpen(false)}
             >
               Affiliate
             </Link>
             <Link
-              href="#contact"
+              href="/reviews"
+              className="text-white/90 hover:text-[#c8f65d] transition-colors text-center py-2 rounded-md hover:bg-white/5"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Reviews
+            </Link>
+            <Link
+              href="/contact"
               className="text-white/90 hover:text-[#c8f65d] transition-colors text-center py-2 rounded-md hover:bg-white/5"
               onClick={() => setIsMenuOpen(false)}
             >
