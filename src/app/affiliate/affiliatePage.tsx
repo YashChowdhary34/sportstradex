@@ -30,10 +30,7 @@ export default function AffiliatePage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Set loading to false after a short delay to ensure animations are ready
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 300);
+    const currentRef = statsRef.current;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -44,14 +41,10 @@ export default function AffiliatePage() {
       { threshold: 0.1 }
     );
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
+    if (currentRef) observer.observe(currentRef);
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
-      }
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 
@@ -68,9 +61,9 @@ export default function AffiliatePage() {
 
     // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
+      anchor.addEventListener("click", function (this: HTMLAnchorElement, e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(this.getAttribute("href")!);
         if (target) {
           target.scrollIntoView({
             behavior: "smooth",
@@ -337,7 +330,7 @@ export default function AffiliatePage() {
               >
                 <div className="inline-block bg-[#b4ff00]/20 px-4 py-1 rounded-full mb-4 backdrop-blur-sm">
                   <span className="text-[#b4ff00] font-semibold text-sm md:text-base">
-                    India's #1 Sports Trading Affiliate Program
+                    India&apos;s #1 Sports Trading Affiliate Program
                   </span>
                 </div>
               </motion.div>
@@ -652,10 +645,10 @@ export default function AffiliatePage() {
               Affiliate Program?
             </h2>
             <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-              Welcome to India's most advanced and rewarding affiliate
+              Welcome to India&apos;s most advanced and rewarding affiliate
               ecosystem. With the SportsTradex Affiliate Program, you earn a 15%
-              lifetime commission on every client's profit — with zero upfront
-              cost.
+              lifetime commission on every client&apos;s profit — with zero
+              upfront cost.
             </p>
           </motion.div>
 
@@ -701,8 +694,8 @@ export default function AffiliatePage() {
                     15% Lifetime Profit Commission
                   </h3>
                   <p className="text-gray-600">
-                    Earn 15% of your clients' profits for life. The more they
-                    win, the more you earn.
+                    Earn 15% of your clients&apos; profits for life. The more
+                    they win, the more you earn.
                   </p>
                 </CardContent>
               </Card>
@@ -843,8 +836,8 @@ export default function AffiliatePage() {
                   <div className="ml-4">
                     <h3 className="text-lg font-medium">Live Analytics</h3>
                     <p className="mt-2 text-gray-600">
-                      Monitor each client's profit, trading activity & status in
-                      real-time
+                      Monitor each client&apos;s profit, trading activity &
+                      status in real-time
                     </p>
                   </div>
                 </motion.div>
@@ -978,8 +971,8 @@ export default function AffiliatePage() {
               Affiliate
             </h2>
             <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
-              To ensure you don't just promote, but convert like a pro, we give
-              you full access to our expert training system
+              To ensure you don&apos;t just promote, but convert like a pro, we
+              give you full access to our expert training system
             </p>
           </motion.div>
 
@@ -993,7 +986,7 @@ export default function AffiliatePage() {
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 shadow-[0_0_30px_rgba(180,255,0,0.1)]">
                 <h3 className="text-2xl font-bold mb-4 text-[#b4ff00]">
-                  "Sports Trading Success Blueprint"
+                  &quot;Sports Trading Success Blueprint&quot;
                 </h3>
                 <p className="text-gray-300 mb-6">
                   8+1 Modules Built by professional traders and analysts
@@ -1387,7 +1380,9 @@ export default function AffiliatePage() {
                         </span>
                       </div>
                     </div>
-                    <p className="text-gray-600 mb-4">"{story.testimonial}"</p>
+                    <p className="text-gray-600 mb-4">
+                      &quot;{story.testimonial}&quot;
+                    </p>
                     <div className="border-t pt-4">
                       {story.achievements.map((achievement, i) => (
                         <div

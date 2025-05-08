@@ -1,7 +1,6 @@
 import { Footer } from "@/components/footer";
 import Navbar from "@/components/navbar";
 import CoursesHeroSection from "./heroSection";
-import FeaturedCourses from "./featuredCourses";
 import WhyOurCourse from "../../components/whyOurCourse";
 import { TestimonialCarousel } from "@/components/testimonialCarousel";
 import CoursesSection from "./coursesSection";
@@ -16,11 +15,11 @@ export default function Courses() {
         <CoursesHeroSection />
       </header>
       <main>
-      <CoursesSection/>
-        <WhyOurCourse/>
-        <TestimonialCarousel/>
-        <FAQ/>
-        <Cta/>
+        <CoursesSection />
+        <WhyOurCourse />
+        <TestimonialCarousel />
+        <FAQ />
+        <Cta />
       </main>
       <footer>
         <Footer />

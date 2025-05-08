@@ -73,11 +73,11 @@ export default function GrowTogetherSection() {
           </p>
 
           <p className="text-gray-600 mb-8 text-base leading-relaxed">
-            : parce qu'une solution digitale, ça se construit ensemble. C'est
-            pour cela qu'un projet ne démarre jamais sans un vrai kick-off et
-            que nous avons développés des méthodologies de{" "}
+            : parce qu&apos;une solution digitale, ça se construit ensemble.
+            C&apos;est pour cela qu&apos;un projet ne démarre jamais sans un
+            vrai kick-off et que nous avons développés des méthodologies de{" "}
             <span className="font-bold">co-construction</span>. Vous impliquer
-            dans chaque étape du projet, c'est vous en donner une maîtrise.
+            dans chaque étape du projet, c&apos;est vous en donner une maîtrise.
           </p>
 
           <motion.div

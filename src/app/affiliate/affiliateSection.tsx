@@ -53,7 +53,7 @@ export default function AffiliatePage() {
         observer.unobserve(statsRef.current);
       }
     };
-  }, []);
+  }, [visibleStories]);
 
   useEffect(() => {
     // Preload animations for better performance
@@ -68,9 +68,9 @@ export default function AffiliatePage() {
 
     // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
+      anchor.addEventListener("click", function (this: HTMLAnchorElement, e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(this.getAttribute("href")!);
         if (target) {
           target.scrollIntoView({
             behavior: "smooth",
@@ -993,7 +993,7 @@ export default function AffiliatePage() {
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 shadow-[0_0_30px_rgba(180,255,0,0.1)]">
                 <h3 className="text-2xl font-bold mb-4 text-[#b4ff00]">
-                  "Sports Trading Success Blueprint&quot;
+                  &quot;Sports Trading Success Blueprint&quot;
                 </h3>
                 <p className="text-gray-300 mb-6">
                   8+1 Modules Built by professional traders and analysts
@@ -1387,7 +1387,9 @@ export default function AffiliatePage() {
                         </span>
                       </div>
                     </div>
-                    <p className="text-gray-600 mb-4">"{story.testimonial}"</p>
+                    <p className="text-gray-600 mb-4">
+                      &quot;{story.testimonial}&quot;
+                    </p>
                     <div className="border-t pt-4">
                       {story.achievements.map((achievement, i) => (
                         <div

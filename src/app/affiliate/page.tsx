@@ -1,4 +1,3 @@
-import AffiliatePanel from "@/components/affiliatePanel";
 import Cta from "@/components/cta";
 import FAQ from "@/components/faq";
 import { Footer } from "@/components/footer";
@@ -12,7 +11,7 @@ export default function Affiliate() {
         <Navbar />
       </header>
       <main>
-        <AffiliatePage/>
+        <AffiliatePage />
         <FAQ />
         <Cta />
       </main>

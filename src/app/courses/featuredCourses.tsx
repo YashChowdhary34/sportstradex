@@ -34,7 +34,25 @@ export default function FeaturedCourses() {
     setSelectedCourse(courseId === selectedCourse ? null : courseId);
   };
 
-  const courses = [
+  interface Course {
+    id: string;
+    backgroundColor: string;
+    category: string;
+    title: string;
+    tagline: string;
+    price: string;
+    content: string;
+    imageSrc: string;
+    modules: {
+      title: string;
+      description: string;
+      details: string[];
+    }[];
+    ctaText: string;
+    ctaLink: string;
+  }
+
+  const courses: Course[] = [
     {
       id: "blueprint",
       backgroundColor: "bg-dark",
@@ -42,7 +60,8 @@ export default function FeaturedCourses() {
       title: "FREE BLUEPRINT COURSE",
       tagline: "Start your cricket analysis journey with zero risk",
       price: "100% Free",
-      content: "For new users and cricket lovers exploring analysis as a side hustle. Acts as an educational gateway + lead magnet + soft upsell base",
+      content:
+        "For new users and cricket lovers exploring analysis as a side hustle. Acts as an educational gateway + lead magnet + soft upsell base",
       imageSrc: "/cricket-analysis.jpg",
       modules: [
         {
@@ -52,8 +71,8 @@ export default function FeaturedCourses() {
             "How sports trading resembles stock/commodity markets",
             "Match momentum, timing, and price movement basics",
             '"Data + Decision = Profit" model',
-            "Why this is India's most underrated online skill"
-          ]
+            "Why this is India's most underrated online skill",
+          ],
         },
         {
           title: "Module 2: Indian Market Sports Trading Blueprint",
@@ -62,8 +81,8 @@ export default function FeaturedCourses() {
             "India's booming sports trading ecosystem",
             "The roles of analysts, match readers & platform partners",
             "Legal pathways to start responsibly",
-            "Who the top consultants are (case-style reference)"
-          ]
+            "Who the top consultants are (case-style reference)",
+          ],
         },
         {
           title: "Module 3: Sports Trading vs Stock Trading",
@@ -71,13 +90,13 @@ export default function FeaturedCourses() {
           details: [
             "Deep dive: Risk, reward, psychology, skill",
             "Why sports trading is faster & more engaging",
-            "Shared strategies like \"Value Investing = Value Trading\"",
-            "CTA to explore advanced tools & dashboards"
-          ]
-        }
+            'Shared strategies like "Value Investing = Value Trading"',
+            "CTA to explore advanced tools & dashboards",
+          ],
+        },
       ],
       ctaText: "Enroll For Free",
-      ctaLink: "/enroll/blueprint"
+      ctaLink: "/enroll/blueprint",
     },
     {
       id: "pro",
@@ -86,7 +105,8 @@ export default function FeaturedCourses() {
       title: "PRO LEARNER PLAN",
       tagline: "Level up with advanced tools and mentorship",
       price: "₹799/month",
-      content: "Best for fantasy pros, aspiring analysts, Telegram group admins, and semi-serious traders. Structured progression + Live Tools + Real-World Application.",
+      content:
+        "Best for fantasy pros, aspiring analysts, Telegram group admins, and semi-serious traders. Structured progression + Live Tools + Real-World Application.",
       imageSrc: "/pro-analysis.jpg",
       modules: [
         {
@@ -96,18 +116,18 @@ export default function FeaturedCourses() {
             "Match phase + momentum analysis techniques",
             "Team forms, pitch data, and timing entry",
             "Candle pattern analogy for timing trades",
-            "Real-time alerts and smart triggers"
-          ]
+            "Real-time alerts and smart triggers",
+          ],
         },
         {
           title: "Module 5: Decision Making Framework",
           description: "Of a Pro Sports Trader",
           details: [
             "Entry–exit planning through live analytics",
-            "Volume control using \"Split Sizing\"",
+            'Volume control using "Split Sizing"',
             "Strategy switching mid-match",
-            "Downloadable worksheet: Decision Tree Matrix"
-          ]
+            "Downloadable worksheet: Decision Tree Matrix",
+          ],
         },
         {
           title: "Bonus Access",
@@ -115,12 +135,12 @@ export default function FeaturedCourses() {
           details: [
             "Telegram-compatible dashboards",
             "Trading log sheets",
-            "2 mentorship calls/month"
-          ]
-        }
+            "2 mentorship calls/month",
+          ],
+        },
       ],
       ctaText: "Start Pro Plan",
-      ctaLink: "/enroll/pro"
+      ctaLink: "/enroll/pro",
     },
     {
       id: "expert",
@@ -129,7 +149,8 @@ export default function FeaturedCourses() {
       title: "EXPERT SUITE",
       tagline: "Full professional toolkit for serious analysts",
       price: "₹1,999/month",
-      content: "For independent consultants, expert fantasy players, data scientists, and community leaders. Full suite of knowledge + community monetization.",
+      content:
+        "For independent consultants, expert fantasy players, data scientists, and community leaders. Full suite of knowledge + community monetization.",
       imageSrc: "/expert-toolkit.jpg",
       modules: [
         {
@@ -140,8 +161,8 @@ export default function FeaturedCourses() {
             "Trading Calendar: Weekly goal-setting framework",
             "₹500 to ₹50,000 Transformation Map",
             "The Consultant's Toolkit: Monetize your knowledge",
-            "Low-Risk High-Control Career Model"
-          ]
+            "Low-Risk High-Control Career Model",
+          ],
         },
         {
           title: "Advanced Access",
@@ -151,13 +172,13 @@ export default function FeaturedCourses() {
             "Priority analytics updates",
             "Access to expert community",
             "Weekly strategy sessions",
-            "Personal growth roadmap"
-          ]
-        }
+            "Personal growth roadmap",
+          ],
+        },
       ],
       ctaText: "Become an Expert",
-      ctaLink: "/enroll/expert"
-    }
+      ctaLink: "/enroll/expert",
+    },
   ];
 
   return (
@@ -200,13 +221,14 @@ export default function FeaturedCourses() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Master cricket analysis and sports trading with our structured learning paths
+            Master cricket analysis and sports trading with our structured
+            learning paths
           </motion.p>
         </div>
-
+        course: Course;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
-            <CourseCard 
+            <CourseCard
               key={course.id}
               course={course}
               index={index}
@@ -216,20 +238,42 @@ export default function FeaturedCourses() {
           ))}
         </div>
       </div>
-
-      
     </section>
   );
 }
 
 interface CourseCardProps {
-  course: any;
+  course: Course;
   index: number;
   isExpanded: boolean;
   onToggleExpand: () => void;
 }
 
-function CourseCard({ course, index, isExpanded, onToggleExpand }: CourseCardProps) {
+// Reuse the Course interface from the parent component
+interface Course {
+  id: string;
+  backgroundColor: string;
+  category: string;
+  title: string;
+  tagline: string;
+  price: string;
+  content: string;
+  imageSrc: string;
+  modules: {
+    title: string;
+    description: string;
+    details: string[];
+  }[];
+  ctaText: string;
+  ctaLink: string;
+}
+
+function CourseCard({
+  course,
+  index,
+  isExpanded,
+  onToggleExpand,
+}: CourseCardProps) {
   return (
     <motion.div
       className={`story-card rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:shadow-lg ${course.backgroundColor} opacity-0`}
@@ -249,14 +293,16 @@ function CourseCard({ course, index, isExpanded, onToggleExpand }: CourseCardPro
           {course.category}
         </div>
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-          <span className="text-[#c8f65d] text-sm font-bold">{course.price}</span>
+          <span className="text-[#c8f65d] text-sm font-bold">
+            {course.price}
+          </span>
         </div>
       </div>
 
       <div className="p-6">
         <div className="flex justify-between items-center mb-3">
           <h3 className="text-xl font-bold text-white">{course.title}</h3>
-          <button 
+          <button
             onClick={onToggleExpand}
             className="flex items-center justify-center w-8 h-8 rounded-full bg-[#c8f65d] text-[#0a2a2f] hover:bg-[#c8f65d]/75 transition-colors"
           >
@@ -265,7 +311,7 @@ function CourseCard({ course, index, isExpanded, onToggleExpand }: CourseCardPro
         </div>
         <p className="text-sm text-white mb-4">{course.tagline}</p>
         <p className="text-sm text-white/80 mb-4">{course.content}</p>
-        
+
         {isExpanded && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -274,20 +320,28 @@ function CourseCard({ course, index, isExpanded, onToggleExpand }: CourseCardPro
             transition={{ duration: 0.3 }}
             className="mt-4 pt-4 border-t border-white/10"
           >
-            {course.modules.map((module: any, i: number) => (
-              <div key={i} className="mb-4">
-                <h4 className="font-bold text-sm mb-1 text-[#c8f65d]">{module.title}</h4>
-                <p className="text-sm text-white/70 mb-2">{module.description}</p>
-                <ul className="text-xs text-white/60 space-y-1 pl-4">
-                  {module.details.map((detail: string, j: number) => (
-                    <li key={j} className="list-disc">{detail}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {course.modules.map(
+              (module: Course["modules"][number], i: number) => (
+                <div key={i} className="mb-4">
+                  <h4 className="font-bold text-sm mb-1 text-[#c8f65d]">
+                    {module.title}
+                  </h4>
+                  <p className="text-sm text-white/70 mb-2">
+                    {module.description}
+                  </p>
+                  <ul className="text-xs text-white/60 space-y-1 pl-4">
+                    {module.details.map((detail: string, j: number) => (
+                      <li key={j} className="list-disc">
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            )}
           </motion.div>
         )}
-        
+
         <Link
           href={course.ctaLink}
           className="mt-4 inline-block bg-[#c8f65d] text-[#0a2a2f] hover:bg-[#c8f65d]/75 transition-colors duration-200 text-sm font-medium py-3 px-4 rounded-full w-full text-center"
