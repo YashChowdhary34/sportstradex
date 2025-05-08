@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
-import Placeholder1 from "@/assets/images/grow_1.png";
-import Placeholder2 from "@/assets/images/grow_2.png";
+import Placeholder1 from "@/assets/images/grow_1.jpg";
+import Placeholder2 from "@/assets/images/grow_2.jpg";
 
 export default function GrowTogetherSection() {
   const ref = useRef(null);

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Placeholder1 from "@/assets/images/profit_1.png";
-import Placeholder2 from "@/assets/images/profit_2.png";
+import Placeholder1 from "@/assets/images/profit_1.jpg";
+import Placeholder2 from "@/assets/images/profit_2.jpg";
 
 export default function CaseStudySection() {
   return (
