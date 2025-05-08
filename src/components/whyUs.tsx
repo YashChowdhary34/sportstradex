@@ -30,7 +30,7 @@ export default function WhyUs() {
 
   const statVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (custom) => ({
+    visible: (custom: number) => ({
       opacity: 1,
       y: 0,
       transition: {
@@ -86,7 +86,7 @@ export default function WhyUs() {
           </motion.h2>
 
           <motion.p
-            className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-800  font-manrope"
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-800 font-manrope"
             variants={titleVariants}
             initial="hidden"
             animate={controls}
