@@ -1,30 +1,39 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Placeholder1 from "@/assets/images/profit_1.png";
+import Placeholder2 from "@/assets/images/profit_2.png";
 
 export default function CaseStudySection() {
   return (
     <section className="w-full bg-[#c8f65d]/75 py-16">
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
-          {/* Left side - Postcards */}
-          <div className="relative h-[300px] md:h-[400px]">
-            <div className="absolute top-0 left-0 md:left-10 rotate-[-10deg] z-10 w-[80%] max-w-[300px]">
-              <Image
-                src="/placeholder.svg?height=300&width=400"
-                alt="Obvi postcard with 20% off promotion"
-                width={400}
-                height={300}
-                className="rounded-md shadow-lg"
-              />
+          {/* Left side - Images */}
+          <div className="relative h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] w-full">
+            <div className="absolute top-0 left-0 md:left-10 rotate-[-5deg] z-10 w-[80%] md:w-[85%] max-w-[350px]">
+              <div className="relative w-full pt-[100%]">
+                <Image
+                  src={Placeholder1}
+                  alt="Global Sports Trading Market statistics"
+                  fill
+                  sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 33vw"
+                  style={{ objectFit: "contain", objectPosition: "top left" }}
+                  className="rounded-md shadow-lg"
+                  priority
+                />
+              </div>
             </div>
-            <div className="absolute top-[120px] md:top-[160px] left-[40px] md:left-[80px] rotate-[5deg] z-20 w-[80%] max-w-[300px]">
-              <Image
-                src="/placeholder.svg?height=300&width=400"
-                alt="Obvi postcard with 20% off promotion"
-                width={400}
-                height={300}
-                className="rounded-md shadow-lg"
-              />
+            <div className="absolute top-[100px] sm:top-[120px] md:top-[160px] left-[40px] md:left-[60px] rotate-[5deg] z-20 w-[80%] md:w-[85%] max-w-[350px]">
+              <div className="relative w-full pt-[100%]">
+                <Image
+                  src={Placeholder2}
+                  alt="Sports Trading Career Growth statistics"
+                  fill
+                  sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 33vw"
+                  style={{ objectFit: "contain", objectPosition: "top left" }}
+                  className="rounded-md shadow-lg"
+                />
+              </div>
             </div>
           </div>
 

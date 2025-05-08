@@ -21,6 +21,8 @@ import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Placeholder1 from "@/assets/images/affiliate_dashboard.jpg";
+import Placeholder2 from "@/assets/images/affiliate-panel.png";
 
 export default function AffiliatePage() {
   const [visibleStories, setVisibleStories] = useState(3);
@@ -947,7 +949,7 @@ export default function AffiliatePage() {
             >
               <div className="bg-white rounded-lg shadow-xl p-2 md:p-4 transform transition-all duration-500 hover:rotate-1 hover:scale-105">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src={Placeholder1}
                   alt="Affiliate Dashboard"
                   width={800}
                   height={600}
@@ -1111,7 +1113,7 @@ export default function AffiliatePage() {
               viewport={{ once: true }}
             >
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src={Placeholder2}
                 alt="Training Blueprint"
                 width={600}
                 height={500}

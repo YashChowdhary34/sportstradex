@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Placeholder1 from "@/assets/images/grow_1.png";
+import Placeholder2 from "@/assets/images/grow_2.png";
 
 export default function GrowTogetherSection() {
   const ref = useRef(null);
@@ -36,7 +38,7 @@ export default function GrowTogetherSection() {
         >
           <div className="rounded-3xl overflow-hidden border-2 border-blue-600 shadow-lg transform -rotate-2">
             <Image
-              src="/placeholder.svg?height=500&width=400"
+              src={Placeholder1}
               alt="Person writing and working"
               width={400}
               height={500}
@@ -109,7 +111,7 @@ export default function GrowTogetherSection() {
         >
           <div className="rounded-3xl overflow-hidden border-2 border-pink-600 shadow-lg transform rotate-2">
             <Image
-              src="/placeholder.svg?height=500&width=400"
+              src={Placeholder2}
               alt="Person working on laptop"
               width={400}
               height={500}

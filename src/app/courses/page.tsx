@@ -6,6 +6,7 @@ import { TestimonialCarousel } from "@/components/testimonialCarousel";
 import CoursesSection from "./coursesSection";
 import FAQ from "@/components/faq";
 import Cta from "@/components/cta";
+import FeaturedModules from "./featuredModules";
 
 export default function Courses() {
   return (
@@ -15,6 +16,7 @@ export default function Courses() {
         <CoursesHeroSection />
       </header>
       <main>
+        <FeaturedModules />
         <CoursesSection />
         <WhyOurCourse />
         <TestimonialCarousel />

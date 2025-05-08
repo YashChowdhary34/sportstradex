@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-export default function FeaturedCourses() {
+export default function FeaturedModules() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
 
