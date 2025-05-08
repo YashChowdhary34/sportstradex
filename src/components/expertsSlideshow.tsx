@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import NehaKapoor1 from "@/assets/images/e1.png";
 import NehaKapoor2 from "@/assets/images/e2.png";
 import RaghavMehta from "@/assets/images/e3.png";
@@ -21,7 +21,7 @@ type ExpertSlideContent = {
   categoryDescription: string;
   experience: string;
   specialties: string[];
-  imagePath: string;
+  imagePath: string | StaticImageData;
 };
 
 export default function ExpertsSlideshow() {
