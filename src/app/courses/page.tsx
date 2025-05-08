@@ -2,11 +2,13 @@ import { Footer } from "@/components/footer";
 import Navbar from "@/components/navbar";
 import CoursesHeroSection from "./heroSection";
 import WhyOurCourse from "../../components/whyOurCourse";
-import { TestimonialCarousel } from "@/components/testimonialCarousel";
 import CoursesSection from "./coursesSection";
 import FAQ from "@/components/faq";
 import Cta from "@/components/cta";
-import FeaturedModules from "./featuredModules";
+import NoHiddenCharges from "./noHiddenCharges";
+import DriveEarnings from "./driveEarnings";
+import { StillNotSure } from "@/components/stillNotSure";
+import Infographics from "@/components/infographics";
 
 export default function Courses() {
   return (
@@ -16,10 +18,13 @@ export default function Courses() {
         <CoursesHeroSection />
       </header>
       <main>
-        <FeaturedModules />
         <CoursesSection />
+        <DriveEarnings />
+        <NoHiddenCharges />
+
         <WhyOurCourse />
-        <TestimonialCarousel />
+        <StillNotSure />
+        <Infographics />
         <FAQ />
         <Cta />
       </main>
