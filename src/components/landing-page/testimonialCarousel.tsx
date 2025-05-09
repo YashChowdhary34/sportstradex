@@ -260,7 +260,7 @@ export function TestimonialCarousel() {
   };
 
   return (
-    <section className="py-10 relative overflow-hidden bg-[#0a2a2f] text-white">
+    <section className="py-10 relative overflow-hidden bg-dark text-white">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-3 font-manrope">
@@ -406,7 +406,7 @@ export function TestimonialCarousel() {
                   "w-3 h-3 rounded-full transition-all duration-300",
                   index === currentIndex
                     ? "bg-lime-400 w-8"
-                    : "bg-zinc-600 hover:bg-zinc-500"
+                    : "bg-darkest hover:bg-darkest/50"
                 )}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

@@ -15,10 +15,10 @@ const config: Config = {
       },
 
       colors: {
-        darkest: "#0a2330",
-        dark: "#0a2a2f",
-        light: "#4ce2c2",
-        lighter: "#c8f65d",
+        darkest: "#013220", // dark green
+        dark: "#355E3B", // hunter green
+        light: "#228B22", // forest green
+        lighter: "#ADFF2F", // green yellow
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

@@ -1,18 +1,18 @@
-import FeaturesSection from "@/components/featuresSection";
-import AffiliatePanel from "../components/affiliatePanel";
+import FeaturesSection from "@/components/landing-page/featuresSection";
+import AffiliatePanel from "../components/landing-page/affiliatePanel";
 import Cta from "../components/cta";
 import FAQ from "../components/faq";
 import { Footer } from "../components/footer";
-import HeroSection from "../components/heroSection";
-import HowItWorks from "../components/howitworks";
+import HeroSection from "../components/landing-page/heroSection";
+import HowItWorks from "../components/landing-page/howitworks";
 import Navbar from "../components/navbar";
-import OfferingSection from "../components/offeringSection";
-import PotentialEarnings from "../components/potentialEarnings";
-import Tape from "../components/tape";
-import { TestimonialCarousel } from "../components/testimonialCarousel";
-import TryCourse from "../components/tryCourse";
-import WhyUs from "../components/whyUs";
-import Infographics from "@/components/infographics";
+import OfferingSection from "../components/landing-page/offeringSection";
+import PotentialEarnings from "../components/landing-page/potentialEarnings";
+import Tape from "../components/landing-page/tape";
+import { TestimonialCarousel } from "../components/landing-page/testimonialCarousel";
+import TryCourse from "../components/landing-page/tryCourse";
+import WhyUs from "../components/landing-page/whyUs";
+import Infographics from "@/components/landing-page/infographics";
 
 export default function Home() {
   return (
@@ -23,8 +23,8 @@ export default function Home() {
       </header>
       <main>
         <Tape />
-        <TryCourse />
         <OfferingSection />
+        <TryCourse />
         <PotentialEarnings />
         <AffiliatePanel />
         <HowItWorks />

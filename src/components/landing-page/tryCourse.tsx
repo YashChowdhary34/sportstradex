@@ -57,7 +57,7 @@ export default function TryCourse() {
   const buttonVariants = {
     initial: { scale: 1 },
     animate: {
-      scale: [1, 1.025, 1],
+      scale: [1, 1.02, 1],
       transition: {
         scale: {
           repeat: Infinity,
@@ -68,8 +68,7 @@ export default function TryCourse() {
     },
     hover: {
       scale: 1.05,
-      boxShadow:
-        "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      boxShadow: "0 10px 25px -5px rgba(76, 225, 182, 0.4)",
       transition: { duration: 0.2 },
     },
     tap: { scale: 0.95 },
@@ -78,7 +77,7 @@ export default function TryCourse() {
   const floatAnimation = {
     hidden: { y: 0 },
     visible: {
-      y: [-8, 8, -8],
+      y: [-5, 5, -5],
       transition: {
         repeat: Infinity,
         duration: 4,
@@ -87,43 +86,42 @@ export default function TryCourse() {
     },
   };
 
+  // Background gradient animation
+  const gradientAnimation = {
+    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+    transition: {
+      duration: 10,
+      repeat: Infinity,
+      ease: "linear",
+    },
+  };
+
   return (
     <section
       ref={sectionRef}
-      className="text-white overflow-hidden relative"
-      style={{
-        background:
-          "linear-gradient(135deg, #0a2a2f 0%, #0a2a2f 50%, #c8f65d 100%)",
-      }}
+      className="text-white overflow-hidden relative bg-darkest"
     >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 left-10 w-32 h-32 rounded-full bg-white opacity-5"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 20, 0],
-            transition: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-          }}
-        />
-        {/* <motion.div
-          className="absolute bottom-20 right-10 w-64 h-64 rounded-full bg-white opacity-5"
-          animate={{
-            scale: [1, 1.1, 1],
-            y: [0, -20, 0],
-            transition: { duration: 10, repeat: Infinity, ease: "easeInOut" },
-          }}
-        /> */}
-      </div>
+      {/* Animated Background Element */}
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full opacity-30"
+        animate={gradientAnimation}
+        style={{
+          background:
+            "linear-gradient(45deg, #0a2a2f 0%, #228B22 50%, #0a2a2f 100%)",
+          backgroundSize: "200% 200%",
+          filter: "blur(120px)",
+          zIndex: 0,
+        }}
+      />
 
-      <div className="container px-4 py-10 mx-auto md:py-24 lg:py-28 relative z-10 ">
+      <div className="container px-4 py-16 mx-auto md:py-24 lg:py-28 relative z-10">
         <motion.div
           className="grid items-center gap-8 md:grid-cols-2"
           variants={containerVariants}
           initial="hidden"
           animate={controls}
         >
-          <div className="space-y-6 ">
+          <div className="space-y-6">
             <motion.h1
               className="text-4xl font-extrabold md:text-5xl lg:text-6xl font-manrope"
               variants={itemVariants}
@@ -132,10 +130,15 @@ export default function TryCourse() {
               <motion.span
                 className="inline-block"
                 animate={{
-                  color: ["#ffffff", "#c8f65d", "#ffffff"],
+                  color: ["#228B22", "#ADFF2F", "#228B22"],
+                  textShadow: [
+                    "0 0 5px rgba(76, 225, 182, 0)",
+                    "0 0 15px rgba(76, 225, 182, 0.5)",
+                    "0 0 5px rgba(76, 225, 182, 0)",
+                  ],
                 }}
                 transition={{
-                  duration: 3,
+                  duration: 7,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
@@ -144,16 +147,19 @@ export default function TryCourse() {
               </motion.span>
             </motion.h1>
 
-            <motion.p className="text-xs md:text-xl" variants={itemVariants}>
+            <motion.p
+              className="text-white/80 text-lg max-w-md"
+              variants={itemVariants}
+            >
               No contracts. No commitments. Guaranteed results.
-              <span className="text-sm">*</span>
+              <span className="text-sm align-super ml-1">*</span>
             </motion.p>
 
             <motion.div
-              className="flex flex-col gap-4 sm:flex-row sm:items-center"
+              className="flex items-center gap-4 flex-wrap"
               variants={itemVariants}
             >
-              {/* Fixed: Wrap button in a div with inline-block to contain the pulsating effect */}
+              {/* Themed button with pulsating effect */}
               <div className="inline-block">
                 <motion.div
                   className="relative inline-block"
@@ -164,19 +170,19 @@ export default function TryCourse() {
                   whileTap="tap"
                 >
                   <Button
-                    className="bg-white text-black hover:bg-gray-100 rounded-md px-6 py-4 text-base font-semibold relative z-10"
+                    className="bg-lighter text-darkest font-medium px-8 py-6 rounded-full hover:bg-lighter/90 transition-colors duration-300 text-base"
                     size="lg"
                   >
                     Get Started
                   </Button>
-                  {/* Separate pulsating effect layer */}
+                  {/* Pulsating effect layer */}
                   <motion.span
-                    className="absolute inset-0 rounded-md"
+                    className="absolute inset-0 rounded-full"
                     animate={{
                       boxShadow: [
-                        "0 0 0 0 rgba(255, 255, 255, 0.7)",
-                        "0 0 0 10px rgba(255, 255, 255, 0)",
-                        "0 0 0 0 rgba(255, 255, 255, 0)",
+                        "0 0 0 0 rgba(76, 225, 182, 0.7)",
+                        "0 0 0 10px rgba(76, 225, 182, 0)",
+                        "0 0 0 0 rgba(76, 225, 182, 0)",
                       ],
                     }}
                     transition={{
@@ -195,7 +201,7 @@ export default function TryCourse() {
                 transition={{ delay: 0.8, duration: 0.5 }}
               >
                 <div className="flex">
-                  {/* 4 Full yellow stars with staggered animation */}
+                  {/* 4 Full stars with staggered animation */}
                   {[...Array(4)].map((_, i) => (
                     <motion.svg
                       key={i}
@@ -203,8 +209,8 @@ export default function TryCourse() {
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
-                      fill="#FFD700"
-                      stroke="#FFD700"
+                      fill="#4ce1b6"
+                      stroke="#4ce1b6"
                       className="w-5 h-5"
                       initial={{ opacity: 0, scale: 0.5 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -226,19 +232,19 @@ export default function TryCourse() {
                   >
                     <defs>
                       <linearGradient id="partialFill">
-                        <stop offset="70%" stopColor="#FFD700" />
-                        <stop offset="70%" stopColor="white" />
+                        <stop offset="70%" stopColor="#4ce1b6" />
+                        <stop offset="70%" stopColor="transparent" />
                       </linearGradient>
                     </defs>
                     <polygon
                       points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
                       fill="url(#partialFill)"
-                      stroke="#FFD700"
+                      stroke="#4ce1b6"
                     />
                   </motion.svg>
                 </div>
                 <motion.span
-                  className="text-sm font-medium"
+                  className="text-sm font-medium text-white/90"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.4, duration: 0.5 }}
@@ -248,7 +254,7 @@ export default function TryCourse() {
               </motion.div>
             </motion.div>
 
-            <motion.p className="text-xs opacity-50" variants={itemVariants}>
+            <motion.p className="text-white/50 text-xs" variants={itemVariants}>
               * for serious learners with verified ₹5 Lakh+ annual income.
             </motion.p>
           </div>
@@ -264,33 +270,43 @@ export default function TryCourse() {
                 animate="visible"
                 className="transform rotate-3"
               >
-                <Image
-                  src={bookletMockup}
-                  placeholder="blur"
-                  alt="Image of course looking like a book"
-                  width={420}
-                  height={420}
-                  className="object-contain drop-shadow-xl"
-                  priority
-                />
+                <div className="relative rounded-xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                  <Image
+                    src={bookletMockup}
+                    placeholder="blur"
+                    alt="Image of course looking like a book"
+                    width={420}
+                    height={420}
+                    className="object-contain drop-shadow-xl"
+                    priority
+                  />
+                </div>
 
                 {/* Decorative elements around the image */}
                 <motion.div
-                  className="absolute -top-4 -right-4 w-16 h-16 bg-white rounded-full flex items-center justify-center"
+                  className="absolute -top-4 -right-4 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg"
                   initial={{ opacity: 0, scale: 0, rotate: -45 }}
-                  animate={{ opacity: 0.9, scale: 1, rotate: 0 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
                   transition={{ delay: 1.2, duration: 0.5 }}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                  }}
                 >
-                  <span className="text-black text-xs font-bold">FREE!</span>
+                  <span className="text-darkest text-xs font-bold">FREE!</span>
                 </motion.div>
 
                 <motion.div
-                  className="absolute -bottom-2 -left-2 w-20 h-20 bg-[#c8f65d] rounded-full flex items-center justify-center"
+                  className="absolute -bottom-2 -left-2 w-20 h-20 bg-[#4ce1b6] rounded-full flex items-center justify-center shadow-lg"
                   initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 0.9, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.4, duration: 0.5 }}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                  }}
                 >
-                  <span className="text-black text-xs font-bold text-center">
+                  <span className="text-darker text-xs font-bold text-center">
                     LIMITED
                     <br />
                     TIME

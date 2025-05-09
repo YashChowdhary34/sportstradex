@@ -74,8 +74,8 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-dark/90 backdrop-blur-sm shadow-md"
-          : "bg-dark/75 backdrop-blur-sm"
+          ? "bg-darkest/80 backdrop-blur-sm shadow-md"
+          : "bg-darkest backdrop-blur-sm"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -98,7 +98,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8 font-semibold font-manrope">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8 font-bold lg:font-extrabold font-manrope">
             <Link
               href="/courses"
               className="text-white hover:text-lighter transition-colors text-xs lg:text-base whitespace-nowrap"
@@ -191,13 +191,13 @@ export default function Navbar() {
               <>
                 <Link
                   href="/login"
-                  className="text-white px-4 py-1.5 lg:px-5 lg:py-2 rounded-full border border-white/20 hover:bg-lighter/25 transition-colors text-xs md:text-sm font-manrope"
+                  className="text-white px-4 py-1.5 lg:px-5 lg:py-2 rounded-full border border-white/20 hover:bg-lighter/25 transition-colors text-xs md:text-sm"
                 >
                   Login
                 </Link>
                 <Link
                   href="/signup"
-                  className="bg-lighter text-dark font-medium px-4 py-1.5 lg:px-5 lg:py-2 rounded-full hover:bg-lighter/75 transition-colors text-xs md:text-sm font-manrope"
+                  className="bg-lighter text-darkest font-medium px-4 py-1.5 lg:px-5 lg:py-2 rounded-full hover:bg-lighter/75 transition-colors text-xs md:text-sm"
                 >
                   Signup
                 </Link>
@@ -222,7 +222,7 @@ export default function Navbar() {
             isMenuOpen ? "max-h-[420px] opacity-100 py-2" : "max-h-0 opacity-0"
           )}
         >
-          <nav className="flex flex-col space-y-3 pb-3 bg-dark shadow-lg rounded-lg p-4 border border-white/10 font-manrope">
+          <nav className="flex flex-col space-y-3 pb-3 bg-dark shadow-lg rounded-lg p-4 border border-white/10 tracking-wide font-extrabold font-manrope">
             <Link
               href="/courses"
               className="text-white/90 hover:text-lighter transition-colors text-center py-2 rounded-md hover:bg-white/5"
@@ -300,14 +300,14 @@ export default function Navbar() {
               <div className="grid grid-cols-2 gap-3 pt-2">
                 <Link
                   href="/login"
-                  className="text-white text-center px-3 py-2 rounded-full border border-white/20 hover:bg-lighter/25 transition-colors font-manrope"
+                  className="text-white text-center px-3 py-2 rounded-full border border-white/20 hover:bg-lighter/25 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Login
                 </Link>
                 <Link
                   href="/signup"
-                  className="bg-lighter text-center text-dark font-medium px-3 py-2 rounded-full hover:bg-lighter/75 transition-colors font-manrope"
+                  className="bg-lighter text-center text-darkest font-medium px-3 py-2 rounded-full hover:bg-lighter/75 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Sign Up

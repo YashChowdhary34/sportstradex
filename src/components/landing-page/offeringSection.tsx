@@ -71,19 +71,19 @@ export default function OfferingSection() {
   }, [activeTab, navigateTab]);
 
   return (
-    <section className="w-full py-10 px-4 overflow-hidden bg-white">
+    <section className="w-full py-6 px-4 overflow-hidden bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Tabs */}
         <div className="flex justify-center mb-10">
-          <div className="inline-flex rounded-full bg-teal-800 p-1">
+          <div className="inline-flex rounded-full bg-dark p-1">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
+                className={`relative px-4 py-2 text-sm font-bold rounded-full transition-all duration-300 font-manrope ${
                   activeTab === tab.id
-                    ? "bg-[#c8f65d] text-black"
-                    : "hover:bg-[#c8f65d] hover:text-black text-white"
+                    ? "bg-lighter text-dark"
+                    : "hover:bg-lighter hover:text-dark text-white"
                 }`}
               >
                 {tab.label}
@@ -92,60 +92,65 @@ export default function OfferingSection() {
           </div>
         </div>
 
-        {/* Content */}
+        {/* Content with fixed height */}
         <div className="flex flex-col gap-8 items-center">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="text-center md:text-left"
-            >
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-4 font-manrope">
-                {content[activeTab].title}
-              </h2>
-              <p className="text-gray-700 mb-6 max-w-lg mx-auto md:mx-0">
-                {content[activeTab].description}
-              </p>
-
-              <div className="flex justify-center md:justify-start space-x-2">
-                <button
-                  className="w-8 h-8 rounded-full bg-[#004d40] text-white flex items-center justify-center hover:bg-[#00695c] transition-colors"
-                  aria-label="Previous"
-                  onClick={() => navigateTab("prev")}
-                >
-                  <ChevronLeft size={18} />
-                </button>
-                <button
-                  className="w-8 h-8 rounded-full bg-[#004d40] text-white flex items-center justify-center hover:bg-[#00695c] transition-colors"
-                  aria-label="Next"
-                  onClick={() => navigateTab("next")}
-                >
-                  <ChevronRight size={18} />
-                </button>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-
-          <div className="relative mt-0">
+          {/* Text Content with fixed height */}
+          <div className="h-40 md:h-40 flex items-start justify-center relative w-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.4 }}
-                className="relative mx-auto max-w-[300px]"
+                initial={{ opacity: 0, y: 20, position: "absolute" }}
+                animate={{ opacity: 1, y: 0, position: "absolute" }}
+                exit={{ opacity: 0, y: -20, position: "absolute" }}
+                transition={{ duration: 0.3 }}
+                className="text-center md:text-left w-full"
               >
-                <div className="relative">
+                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 font-manrope">
+                  {content[activeTab].title}
+                </h2>
+                <p className="text-gray-700 mb-6 max-w-lg mx-auto md:mx-0">
+                  {content[activeTab].description}
+                </p>
+
+                <div className="flex justify-center md:justify-start space-x-2">
+                  <button
+                    className="w-8 h-8 rounded-full bg-dark text-white flex items-center justify-center hover:bg-light transition-colors"
+                    aria-label="Previous"
+                    onClick={() => navigateTab("prev")}
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  <button
+                    className="w-8 h-8 rounded-full bg-dark text-white flex items-center justify-center hover:bg-light transition-colors"
+                    aria-label="Next"
+                    onClick={() => navigateTab("next")}
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Image Content with fixed height */}
+          <div className="h-[600px] relative w-full flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, x: 50, position: "absolute" }}
+                animate={{ opacity: 1, x: 0, position: "absolute" }}
+                exit={{ opacity: 0, x: -50, position: "absolute" }}
+                transition={{ duration: 0.4 }}
+                className="relative mx-auto"
+                style={{ width: "300px", height: "600px" }}
+              >
+                <div className="relative w-full h-full flex items-center justify-center">
                   <Image
                     src={content[activeTab].image}
                     alt={`${activeTab} mockup`}
                     width={300}
                     height={600}
-                    className="relative z-10"
+                    className="relative z-10 object-contain max-h-full"
                   />
                 </div>
               </motion.div>

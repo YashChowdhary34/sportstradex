@@ -8,7 +8,7 @@ import Cta from "@/components/cta";
 import NoHiddenCharges from "./noHiddenCharges";
 import DriveEarnings from "./driveEarnings";
 import { StillNotSure } from "@/components/stillNotSure";
-import Infographics from "@/components/infographics";
+import Infographics from "@/components/landing-page/infographics";
 
 export default function Courses() {
   return (

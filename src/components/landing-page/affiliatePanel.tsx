@@ -6,7 +6,7 @@ export default function AffiliatePanel() {
   return (
     <section className="py-10 bg-dark text-white">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col space-x-5 md:flex-row">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 font-manrope">
               GET ACCESS TO OUR AFFILIATE PANEL

@@ -18,25 +18,25 @@ export default function Tape() {
   }, []);
 
   const sports = [
-    "Cricket",
+    "Casino",
     "Football",
     "Greyhound Racing",
     "Tennis",
-    "Casino",
+    "Cricket",
     "Horse Racing",
     "Badminton",
     "Poker",
   ];
 
   return (
-    <section className="pb-12 pt-5 bg-gradient-to-b from-white to-zinc-50 overflow-hidden relative">
+    <section className="pb-6 pt-5 bg-gradient-to-b from-white to-zinc-50 overflow-hidden relative">
       {/* Gradient overlays */}
       <div className="absolute inset-y-0 left-0 w-24 md:w-36 lg:w-48 bg-gradient-to-r from-zinc-50 to-transparent z-10" />
       <div className="absolute inset-y-0 right-0 w-24 md:w-36 lg:w-48 bg-gradient-to-l from-zinc-50 to-transparent z-10" />
 
       {/* Section title */}
       <div className="container mx-auto mb-8 px-4 relative z-20">
-        <h3 className="text-center text-zinc-400 font-medium uppercase tracking-wider font-manrope">
+        <h3 className="text-center text-zinc-400 uppercase tracking-wider font-extrabold font-manrope">
           Trading Markets
         </h3>
       </div>
@@ -66,9 +66,9 @@ export default function Tape() {
                   className="flex items-center"
                 >
                   <span
-                    className="text-5xl md:text-6xl lg:text-7xl px-4 font-extrabold font-manrope"
+                    className="text-5xl md:text-6xl lg:text-7xl px-4 font-bold"
                     style={{
-                      color: idx % 2 === 0 ? "#c8f65d" : "#0a2a2f",
+                      color: idx % 2 === 0 ? "#228B22" : "#ADFF2F",
                     }}
                   >
                     {sport}
