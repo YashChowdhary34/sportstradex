@@ -4,7 +4,7 @@ import PlaceholderImage from "@/assets/images/footer_cta.png";
 
 export default function Cta() {
   return (
-    <section className="py-10 bg-[#c8f65d]">
+    <section className="py-10 bg-lighter">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
@@ -27,10 +27,10 @@ export default function Cta() {
             </p>
 
             <div className="flex gap-4">
-              <Button className="bg-[#0a2a2f] text-white hover:bg-[#0a2a2f]/75 flex items-center gap-2">
+              <Button className="bg-darkest text-white hover:bg-dark flex items-center gap-2">
                 <span>Enroll for Free</span>
               </Button>
-              <Button className="bg-[#0a2a2f] text-white hover:bg-[#0a2a2f]/75 flex items-center gap-2">
+              <Button className="bg-darkest text-white hover:bg-dark flex items-center gap-2">
                 <span>Chat with Us</span>
               </Button>
             </div>

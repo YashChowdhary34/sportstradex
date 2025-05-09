@@ -4,18 +4,18 @@ import Placeholder from "@/assets/images/hidden_charges_mockup.png";
 
 export default function NoHiddenCharges() {
   return (
-    <section className="bg-white text-black py-16 px-4 md:py-24 overflow-hidden">
+    <section className="bg-white text-black py-16 px-6 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
-          <p className="text-emerald-400 text-sm md:text-base mb-2 animate-fadeIn">
-            400,000 ACCOUNTS & COUNTING
+          <p className="text-light text-sm md:text-base mb-2 animate-fadeIn">
+            400,000 STUDENTS & COUNTING
           </p>
-          <h2 className="text-2xl md:text-4xl font-bold mb-2 animate-slideUp">
-            No hidden fees. No credit checks.
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-2 animate-slideUp font-manrope">
+            No hidden fees. No prior checks.
           </h2>
-          <p className="text-xl md:text-2xl animate-slideUp animation-delay-200">
-            No more barriers to building credit.
+          <p className="text-xl md:text-2xl animate-slideUp animation-delay-200 font-medium font-manrope">
+            No more barriers to earning passive income.
           </p>
         </div>
 
@@ -25,10 +25,10 @@ export default function NoHiddenCharges() {
           <div className="hidden md:flex flex-col justify-center space-y-24">
             <div className="max-w-xs animate-fadeInLeft animation-delay-300">
               <div className="flex items-start mb-3">
-                <CreditCard className="h-8 w-8 text-emerald-400 mr-2 flex-shrink-0" />
+                <CreditCard className="h-8 w-8 text-light mr-2 flex-shrink-0" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
-                Get a secured credit card and bank account in 5 minutes.
+              <h3 className="text-lg font-bold font-manrope mb-2">
+                Get the free course and an account in 5 minutes.
               </h3>
               <p className="text-gray-400 text-sm">
                 No credit history, credit check, or minimum deposit required.
@@ -37,10 +37,10 @@ export default function NoHiddenCharges() {
 
             <div className="max-w-xs animate-fadeInLeft animation-delay-500">
               <div className="flex items-start mb-3">
-                <Trophy className="h-8 w-8 text-emerald-400 mr-2 flex-shrink-0" />
+                <Trophy className="h-8 w-8 text-light mr-2 flex-shrink-0" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
-                The only premium card for building credit.
+              <h3 className="text-lg font-bold font-manrope mb-2">
+                The only premium course for building income.
               </h3>
               <p className="text-gray-400 text-sm">
                 2% unlimited cash back on your favorite brands, 2X first year
@@ -67,9 +67,9 @@ export default function NoHiddenCharges() {
           <div className="hidden md:flex flex-col justify-center space-y-24">
             <div className="max-w-xs animate-fadeInRight animation-delay-300">
               <div className="flex items-start mb-3">
-                <CheckCircle className="h-8 w-8 text-emerald-400 mr-2 flex-shrink-0" />
+                <CheckCircle className="h-8 w-8 text-light mr-2 flex-shrink-0" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-bold font-manrope mb-2">
                 Build your U.S. credit
               </h3>
               <p className="text-gray-400 text-sm">
@@ -80,9 +80,9 @@ export default function NoHiddenCharges() {
 
             <div className="max-w-xs animate-fadeInRight animation-delay-500">
               <div className="flex items-start mb-3">
-                <Globe className="h-8 w-8 text-emerald-400 mr-2 flex-shrink-0" />
+                <Globe className="h-8 w-8 text-light mr-2 flex-shrink-0" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-bold font-manrope mb-2">
                 Bank like a global citizen with Sable.
               </h3>
               <p className="text-gray-400 text-sm">
@@ -96,9 +96,9 @@ export default function NoHiddenCharges() {
           <div className="grid grid-cols-1 gap-8 md:hidden">
             <div className="animate-fadeInUp animation-delay-300">
               <div className="flex items-start mb-3">
-                <CreditCard className="h-8 w-8 text-emerald-400 mr-2 flex-shrink-0" />
+                <CreditCard className="h-8 w-8 text-light mr-2 flex-shrink-0" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-bold font-manrope mb-2">
                 Get a secured credit card and bank account in 5 minutes.
               </h3>
               <p className="text-gray-400 text-sm">
@@ -108,9 +108,9 @@ export default function NoHiddenCharges() {
 
             <div className="animate-fadeInUp animation-delay-400">
               <div className="flex items-start mb-3">
-                <Trophy className="h-8 w-8 text-emerald-400 mr-2 flex-shrink-0" />
+                <Trophy className="h-8 w-8 text-light mr-2 flex-shrink-0" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-bold font-manrope mb-2">
                 The only premium card for building credit.
               </h3>
               <p className="text-gray-400 text-sm">
@@ -121,9 +121,9 @@ export default function NoHiddenCharges() {
 
             <div className="animate-fadeInUp animation-delay-500">
               <div className="flex items-start mb-3">
-                <CheckCircle className="h-8 w-8 text-emerald-400 mr-2 flex-shrink-0" />
+                <CheckCircle className="h-8 w-8 text-light mr-2 flex-shrink-0" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-bold font-manrope mb-2">
                 Build your U.S. credit
               </h3>
               <p className="text-gray-400 text-sm">
@@ -134,9 +134,9 @@ export default function NoHiddenCharges() {
 
             <div className="animate-fadeInUp animation-delay-600">
               <div className="flex items-start mb-3">
-                <Globe className="h-8 w-8 text-emerald-400 mr-2 flex-shrink-0" />
+                <Globe className="h-8 w-8 text-light mr-2 flex-shrink-0" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-bold font-manrope mb-2">
                 Bank like a global citizen with Sable.
               </h3>
               <p className="text-gray-400 text-sm">
@@ -148,9 +148,9 @@ export default function NoHiddenCharges() {
         </div>
 
         {/* Divider */}
-        <div className="mt-16 md:mt-24">
+        {/* <div className="mt-16 md:mt-24">
           <div className="h-px bg-gray-800 w-full"></div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

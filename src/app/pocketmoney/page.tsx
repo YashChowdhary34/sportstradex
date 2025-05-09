@@ -6,6 +6,7 @@ import FAQ from "@/components/pocket-money/faq";
 import CallToAction from "@/components/pocket-money/call-to-action";
 import { Footer } from "@/components/footer";
 import Navbar from "@/components/navbar";
+import DriveEarnings from "@/components/courses-page/driveEarnings";
 
 export default function PocketMoneyPage() {
   return (
@@ -16,6 +17,7 @@ export default function PocketMoneyPage() {
       <main className="pt-20">
         <PocketMoneyHero />
         <HowItWorks />
+        <DriveEarnings />
         <EarningsOverview />
         <WhyChooseUs />
         <FAQ />

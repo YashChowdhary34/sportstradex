@@ -54,7 +54,7 @@ export default function FAQ() {
       {/* Split background */}
       <div className="absolute inset-0 z-0">
         <div className="h-1/2 bg-white"></div>
-        <div className="h-1/2 bg-[#c8f65d]"></div>
+        <div className="h-1/2 bg-lighter"></div>
       </div>
 
       {/* Content container */}
@@ -63,7 +63,7 @@ export default function FAQ() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* FAQ Questions Column */}
             <div className="p-4 md:p-6 border-b md:border-b-0 md:border-r border-gray-200">
-              <h2 className="text-xl md:text-2xl font-extrabold text-[#0a2a2f] mb-4 md:mb-6 font-manrope">
+              <h2 className="text-xl md:text-2xl font-extrabold text-darkest mb-4 md:mb-6 font-manrope">
                 FAQs.
               </h2>
               <div className="space-y-2 md:space-y-3">
@@ -73,13 +73,13 @@ export default function FAQ() {
                     onClick={() => setSelectedFAQ(index)}
                     className={`w-full text-left p-2 md:p-3 rounded-md flex justify-between items-center transition-colors text-sm md:text-base ${
                       selectedFAQ === index
-                        ? "bg-[#0a2a2f] text-white"
-                        : "text-[#0a2a2f] hover:bg-[#0a2a2f]/10"
+                        ? "bg-darkest text-white"
+                        : "text-darkest hover:bg-darkest/10"
                     }`}
                   >
                     <span className="pr-2">{faq.question}</span>
                     {selectedFAQ === index && (
-                      <Star className="h-3 w-3 md:h-4 md:w-4 text-[#c8f65d] fill-[#c8f65d] flex-shrink-0" />
+                      <Star className="h-3 w-3 md:h-4 md:w-4 text-lighter fill-lighter flex-shrink-0" />
                     )}
                   </button>
                 ))}
@@ -88,16 +88,13 @@ export default function FAQ() {
 
             {/* Answer Column */}
             <div className="p-4 md:p-6">
-              <h2
-                className="text-xl md:text-2xl font-bold text-[#0a5749] mb-4 md:mb-6"
-                style={{ fontFamily: "var(--font-poppins)" }}
-              >
+              <h2 className="text-xl md:text-2xl font-extrabold text-darkest mb-4 md:mb-6 font-manrope">
                 Ans.
               </h2>
-              <div className="bg-[#c8f65d] p-4 md:p-6 rounded-md">
+              <div className="bg-lighter p-4 md:p-6 rounded-md">
                 <div className="flex items-start gap-2">
-                  <Star className="h-3 w-3 md:h-4 md:w-4 mt-1 text-[#0a2a2f] fill-[#0a5749] flex-shrink-0" />
-                  <p className="text-[#0a5749] text-sm md:text-base">
+                  <Star className="h-3 w-3 md:h-4 md:w-4 mt-1 text-darkest fill-darkest flex-shrink-0" />
+                  <p className="text-darkest text-sm md:text-base">
                     {faqs[selectedFAQ].answer}
                   </p>
                 </div>

@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import FAQ from "@/components/faq";
 import Cta from "@/components/cta";
 import TestimonialSlideshow from "./testimonialSlideshow";
+import DriveEarnings from "@/components/courses-page/driveEarnings";
 
 export default function Reviews() {
   return (
@@ -17,6 +18,7 @@ export default function Reviews() {
       <main>
         <TestimonialSlideshow />
         <WelcomeSection />
+        <DriveEarnings />
         <LovedBySection />
         <FAQ />
         <Cta />
