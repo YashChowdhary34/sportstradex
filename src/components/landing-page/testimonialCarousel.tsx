@@ -14,6 +14,15 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import TestimonialHeadshot from "@/assets/images/testimonals-headshot.jpg";
+import ananya from'@/assets/testimonals/ananyadesia.png'
+import arjun from '@/assets/testimonals/arjunreddy.png'
+import karan from '@/assets/testimonals/karan.png'
+import meera from '@/assets/testimonals/meera.png'
+import rajesh from  '@/assets/testimonals/rajesh.png'
+import priya from '@/assets/testimonals/priya.png'
+import vikram from  '@/assets/testimonals/vikram.png'
+import suresh from '@/assets/testimonals/suresh.png'
+import raj from '@/assets/testimonals/raj.png'
 
 // Testimonial data type
 type Testimonial = {
@@ -34,7 +43,7 @@ const testimonials: Testimonial[] = [
     name: "Rajesh Sharma",
     role: "Aspiring Sports Trader",
     location: "Mumbai",
-    image: TestimonialHeadshot.src,
+    image: rajesh.src,
     content:
       "Sportstradex has revolutionized how I approach sports trading. The free courses simplified complex strategies and the pocket money program is a creative way to earn by promoting partners on social media.",
     rating: 5,
@@ -45,7 +54,7 @@ const testimonials: Testimonial[] = [
     name: "Priya Patel",
     role: "Content Creator",
     location: "Bangalore",
-    image: TestimonialHeadshot.src,
+    image: priya.src,
     content:
       "Sportstradex is a game-changer! I now understand trading and have started earning consistently through their affiliate program. Sharing on social media is so easy and rewarding.",
     rating: 5,
@@ -56,7 +65,7 @@ const testimonials: Testimonial[] = [
     name: "Vikram Malhotra",
     role: "College Student",
     location: "Delhi",
-    image: TestimonialHeadshot.src,
+    image: vikram.src,
     content:
       "The courses on Sportstradex are incredibly detailed and practical. I learned trading strategies that boosted my confidence and the pocket money program helped me earn extra ₹150 effortlessly.",
     rating: 4,
@@ -67,7 +76,7 @@ const testimonials: Testimonial[] = [
     name: "Ananya Desai",
     role: "Freelance Marketer",
     location: "Chennai",
-    image: TestimonialHeadshot.src,
+    image: ananya.src,
     content:
       "Sportstradex offers the perfect blend of learning and earning. The affiliate program helped me diversify my income streams and the free courses sharpened my trading skills.",
     rating: 5,
@@ -78,7 +87,7 @@ const testimonials: Testimonial[] = [
     name: "Arjun Reddy",
     role: "Recent Graduate",
     location: "Hyderabad",
-    image: TestimonialHeadshot.src,
+    image: arjun.src,
     content:
       "As a beginner in sports trading, Sportstradex has been a lifesaver. Their free courses are easy to follow and the earning programs are a fantastic way to gain financial stability.",
     rating: 5,
@@ -89,7 +98,7 @@ const testimonials: Testimonial[] = [
     name: "Meera Iyer",
     role: "Homemaker",
     location: "Kolkata",
-    image: TestimonialHeadshot.src,
+    image: meera.src,
     content:
       "I never imagined being able to earn through sports trading until I joined Sportstradex. The courses are beginner-friendly, and the affiliate program is perfect for passive earnings!",
     rating: 5,
@@ -100,29 +109,18 @@ const testimonials: Testimonial[] = [
     name: "Karan Singh",
     role: "Small Business Owner",
     location: "Pune",
-    image: TestimonialHeadshot.src,
+    image: karan.src,
     content:
       "Sportstradex's free courses made sports trading accessible for me. I've started earning through the pocket money program and developed skills to grow my trading portfolio.",
     rating: 4,
     course: "Trading Portfolio Management",
   },
   {
-    id: 8,
-    name: "Divya Krishnan",
-    role: "Student",
-    location: "Gurgaon",
-    image: TestimonialHeadshot.src,
-    content:
-      "Sportstradex combines education and earnings seamlessly. The trading tips I picked up have already paid off, and the pocket money program is such a creative initiative!",
-    rating: 5,
-    course: "Creative Earning Programs",
-  },
-  {
     id: 9,
     name: "Suresh Menon",
     role: "Entrepreneur",
     location: "Kochi",
-    image: TestimonialHeadshot.src,
+    image: suresh.src,
     content:
       "Sportstradex has helped me discover sports trading as a viable earning avenue. Their affiliate and pocket money programs are reliable and rewarding.",
     rating: 4,
@@ -130,10 +128,10 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 10,
-    name: "Neha Agarwal",
+    name: "Raj Agarwal",
     role: "Sports Enthusiast",
     location: "Jaipur",
-    image: TestimonialHeadshot.src,
+    image: raj.src,
     content:
       "I was always interested in sports, and Sportstradex helped me turn that passion into a source of income. The courses and programs are simple yet impactful!",
     rating: 5,
