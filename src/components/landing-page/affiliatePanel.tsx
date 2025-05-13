@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import AffiliateImage from "@/assets/images/affiliate_dashboard.jpg";
+import AffiliateImage from "@/assets/images/agent-dashboard.png";
 import Image from "next/image";
 
 export default function AffiliatePanel() {

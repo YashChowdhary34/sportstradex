@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChartNoAxesCombined  } from "lucide-react";
 import { motion } from "framer-motion";
-import HeroImage from "@/assets/herosection/hero.png";
+import HeroImage from "@/assets/herosection/heroImage.png" ;
 import NSEAcademyLogo from "@/assets/logo/others/nse-academy-logo.png";
 import FinologyLogo from "@/assets/logo/others/finology-logo.png";
 import TradingviewLogo from "@/assets/logo/others/tradingview-logo.png";
@@ -124,7 +124,7 @@ export default function HeroSection() {
                   href="/account"
                   className="inline-block bg-lighter text-darker font-medium px-6 py-3 rounded-full hover:bg-lighter/75 transition-colors duration-300 btn-hover-effect"
                 >
-                  Claim Now
+                  Free Course
                 </Link>
               </motion.div>
               <motion.div
@@ -268,7 +268,7 @@ export default function HeroSection() {
               </motion.div>
 
               {/* Rating Card - Updated with subtle animations */}
-              <motion.div
+              {/* <motion.div
                 className="absolute top-4 left-4 md:left-8 bg-[#e8f9f5] p-4 rounded-xl shadow-lg w-40 z-10"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -308,10 +308,10 @@ export default function HeroSection() {
                   <br />
                   Feedback
                 </motion.p>
-              </motion.div>
+              </motion.div> */}
 
               {/* Users Card - Updated with subtle animations */}
-              <motion.div
+              {/* <motion.div
                 className="absolute bottom-10 right-4 md:right-8 bg-[#4ce1b6] p-4 rounded-xl shadow-lg w-40 z-10"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -357,7 +357,7 @@ export default function HeroSection() {
                     <span className="text-white text-xs">+14.6%</span>
                   </motion.div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </motion.div>

@@ -8,7 +8,7 @@ export default function PotentialEarnings() {
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6 max-w-3xl mx-auto font-manrope">
-          Discover the Most Profitable Skill-Based Career You Haven&apos;t Heard
+          Most Profitable Skill-Based Career You Haven&apos;t Heard
           Of
         </h2>
         <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
