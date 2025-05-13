@@ -13,7 +13,6 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import TestimonialHeadshot from "@/assets/images/testimonals-headshot.jpg";
 import ananya from'@/assets/testimonals/ananyadesia.png'
 import arjun from '@/assets/testimonals/arjunreddy.png'
 import karan from '@/assets/testimonals/karan.png'
