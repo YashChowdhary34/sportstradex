@@ -46,11 +46,11 @@ export default function HeroSection() {
   };
 
   // Subtle card hover animation
-  const cardHoverAnimation = {
-    scale: 1.03,
-    boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)",
-    transition: { duration: 0.3, ease: "easeOut" },
-  };
+  // const cardHoverAnimation = {
+  //   scale: 1.03,
+  //   boxShadow: "0 10px 20px rgba(0, 0, 0, 0.15)",
+  //   transition: { duration: 0.3, ease: "easeOut" },
+  // };
 
   return (
     <div className="relative min-w-full bg-darkest overflow-hidden">
