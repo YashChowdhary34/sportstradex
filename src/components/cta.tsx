@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import PlaceholderImage from "@/assets/images/footer_cta.png";
+import Blueprint from "@/assets/images/footer (2).png";
 
 export default function Cta() {
   return (
@@ -9,7 +9,7 @@ export default function Cta() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <Image
-              src={PlaceholderImage}
+              src={Blueprint}
               alt="Mobile App Interface"
               width={400}
               height={500}
