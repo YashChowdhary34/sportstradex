@@ -1,4 +1,4 @@
-import FeaturesSection from "@/components/landing-page/featuresSection";
+
 import AffiliatePanel from "../components/landing-page/affiliatePanel";
 import Cta from "../components/cta";
 import FAQ from "../components/faq";
