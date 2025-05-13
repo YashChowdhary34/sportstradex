@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion, useInView, useAnimation } from "framer-motion";
-import bookletMockup from "@/assets/images/booklet-mockup.png";
+import bookletMockup from "@/assets/images/try-course.png";
 
 export default function TryCourse() {
   const controls = useAnimation();
@@ -270,7 +270,7 @@ export default function TryCourse() {
                 animate="visible"
                 className="transform rotate-3"
               >
-                <div className="relative rounded-xl overflow-hidden bg-white/5 backdrop-blur-sm">
+                <div className="relative rounded-xl overflow-hidden  backdrop-blur-sm">
                   <Image
                     src={bookletMockup}
                     placeholder="blur"

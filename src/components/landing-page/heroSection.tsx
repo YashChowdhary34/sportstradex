@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { BookOpenCheck } from "lucide-react";
+import { ChartNoAxesCombined  } from "lucide-react";
 import { motion } from "framer-motion";
-import HeroImage from "@/assets/images/hero-vertical.png";
+import HeroImage from "@/assets/herosection/hero.png";
 import NSEAcademyLogo from "@/assets/logo/others/nse-academy-logo.png";
 import FinologyLogo from "@/assets/logo/others/finology-logo.png";
 import TradingviewLogo from "@/assets/logo/others/tradingview-logo.png";
@@ -145,12 +145,12 @@ export default function HeroSection() {
                       repeatDelay: 5,
                     }}
                   >
-                    <BookOpenCheck
+                    <ChartNoAxesCombined 
                       size={15}
                       className="text-[#0a2a2f] ml-0.5"
                     />
                   </motion.div>
-                  Read Reviews
+                  Start Trading
                 </Link>
               </motion.div>
             </motion.div>
@@ -245,7 +245,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
               >
                 <motion.div
-                  className="relative h-full w-full rounded-xl overflow-hidden bg-white/5 backdrop-blur-sm"
+                  className="relative h-full w-full rounded-xl overflow-hidden"
                   transition={{ duration: 3, repeat: Infinity, repeatDelay: 5 }}
                 >
                   <Image

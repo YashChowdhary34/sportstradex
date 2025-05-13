@@ -1,5 +1,5 @@
 import Image from "next/image";
-import InfographicImage from "@/assets/images/infographics.jpg";
+import InfographicImage from "@/assets/images/infographics.png";
 
 export default function Infographics() {
   return (
