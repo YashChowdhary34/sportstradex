@@ -114,7 +114,11 @@ export default function ImagesSection() {
     }, 600);
   };
 
-  const goToSlide = (index) => {
+  interface GoToSlide {
+    (index: number): void;
+  }
+
+  const goToSlide: GoToSlide = (index: number): void => {
     if (isTransitioning.current || index === currentIndex) return;
     isTransitioning.current = true;
 
@@ -122,7 +126,7 @@ export default function ImagesSection() {
     resetAutoplayTimer();
 
     // Reset transitioning status after animation completes
-    setTimeout(() => {
+    setTimeout((): void => {
       isTransitioning.current = false;
     }, 600);
   };
