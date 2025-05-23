@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Play } from "lucide-react";
 import StatsCounter from "@/components/statsCounter";
 import Placeholder from "@/assets/reviews/hero-image.png";
 
@@ -59,14 +58,6 @@ export default function ReviewHero() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button
-                className="w-16 h-16 md:w-20 md:h-20 bg-[#4ce2c2] rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all"
-                aria-label="Play video"
-              >
-                <Play className="w-8 h-8 md:w-10 md:h-10 text-white fill-white" />
-              </button>
-            </div>
           </div>
         </div>
       </div>
