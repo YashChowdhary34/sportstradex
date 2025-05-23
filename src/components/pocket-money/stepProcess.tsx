@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import StepOne from "@/assets/pocketMoney/step-1.png";
 import StepTwo from "@/assets/pocketMoney/step-2.png";
 import StepThree from "@/assets/pocketMoney/step-3.png";
@@ -13,7 +13,7 @@ interface Step {
   number: string;
   title: string;
   description: string;
-  image: any;
+  image: StaticImageData;
 }
 
 // Sample data with actual images
